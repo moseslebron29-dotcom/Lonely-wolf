@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: lonely-wolf
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PREFIX
+        value: .
+      - key: BOT_NAME
+        value: LONELY WOLF
+      - key: OWNER_NUMBER
+        sync: false
+      - key: AUTH_DIR
+        value: /var/data/auth
+      - key: PAIRING_SECRET
+        generateValue: true
+    disk:
+      name: lonely-wolf-data
+      mountPath: /var/data
+      sizeGB: 1

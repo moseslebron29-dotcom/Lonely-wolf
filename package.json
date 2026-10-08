@@ -1,0 +1,22 @@
+{
+  "name": "lonely-wolf",
+  "version": "3.0.0",
+  "private": true,
+  "description": "LONELY WOLF WhatsApp bot with a mobile pairing website",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.18",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "pino": "^9.6.0"
+  }
+}
